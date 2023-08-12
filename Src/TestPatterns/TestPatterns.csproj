@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Strategy\StrategyPattern\StrategyPattern.csproj" />
+    <Reference Include="StrategyPattern">
+      <HintPath>..\StrategyPattern\bin\Debug\net6.0\StrategyPattern.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
