@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="StrategyPattern">
-      <HintPath>..\StrategyPattern\bin\Debug\net6.0\StrategyPattern.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\StrategyPattern\StrategyPattern.csproj" />
   </ItemGroup>
 
 </Project>

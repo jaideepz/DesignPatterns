@@ -1,22 +1,26 @@
 ﻿using StrategyPattern.Fly;
+using StrategyPattern.Quack;
 
 namespace StrategyPattern
 {
-    public class Duck : IFlyBehaviour
+    public class Duck
     {
-        public void Quack()
+        private IFlyBehaviour flyBehaviour;
+
+        private IQuackBehaviour quackBehaviour;
+
+        public Duck(IFlyBehaviour flyBehaviour, IQuackBehaviour quackBehaviour)
         {
-            Console.WriteLine("Quacking");
+            this.flyBehaviour = flyBehaviour;
+            this.quackBehaviour = quackBehaviour;
         }
 
-        public void Display()
-        {
-            Console.WriteLine("Displaying");
+        public void Fly() { 
+            flyBehaviour.Fly();
         }
 
-        public void Fly()
-        {
-            Console.WriteLine("Flying");
+        public void Quack() { 
+            quackBehaviour.Quack();
         }
     }
 }
